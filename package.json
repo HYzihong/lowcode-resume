@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "build:shared": "pnpm -C ./packages/shared build",
-    "dev:shared": "pnpm -C ./packages/shared stub"
+    "dev:shared": "pnpm -C ./packages/shared stub",
+    "test:shared": "pnpm -C ./packages/shared test",
+    "coverage:shared": "pnpm -C ./packages/shared coverage"
   },
   "repository": {
     "type": "git",
@@ -26,6 +28,7 @@
     "vitest": "^0.12.6"
   },
   "dependencies": {
+    "c8": "^7.11.2",
     "vue": "^3.2.33"
   }
 }

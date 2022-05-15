@@ -17,7 +17,8 @@
   "scripts": {
     "build": "unbuild",
     "stub": "unbuild --stub",
-    "test": "vitest"
+    "test": "vitest",
+    "coverage": "vitest run --coverage"
   },
   "keywords": [
     "resume-cook",
