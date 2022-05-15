@@ -4,7 +4,8 @@
   "description": "resume by lowcode cooking",
   "main": "index.js",
   "scripts": {
-    "build:shared": "pnpm -C ./packages/shared build"
+    "build:shared": "pnpm -C ./packages/shared build",
+    "dev:shared": "pnpm -C ./packages/shared stub"
   },
   "repository": {
     "type": "git",
