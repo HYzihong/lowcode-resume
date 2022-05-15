@@ -7,7 +7,12 @@
     "build:shared": "pnpm -C ./packages/shared build",
     "dev:shared": "pnpm -C ./packages/shared stub",
     "test:shared": "pnpm -C ./packages/shared test",
-    "coverage:shared": "pnpm -C ./packages/shared coverage"
+    "coverage:shared": "pnpm -C ./packages/shared coverage",
+    "dev:lowcode": "pnpm -C ./apps/lowcode dev",
+    "build:lowcode": "pnpm -C ./apps/lowcode build",
+    "lint:lowcode": "pnpm -C ./apps/lowcode lint",
+    "test": "vitest",
+    "test:unit": "vitest"
   },
   "repository": {
     "type": "git",
