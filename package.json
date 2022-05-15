@@ -1,0 +1,20 @@
+{
+  "name": "resume-cook",
+  "version": "1.0.0",
+  "description": "resume by lowcode cooking",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HYzihong/lowcode-resume.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HYzihong/lowcode-resume/issues"
+  },
+  "homepage": "https://github.com/HYzihong/lowcode-resume#readme"
+}
