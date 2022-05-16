@@ -19,7 +19,12 @@
     "type": "git",
     "url": "git+https://github.com/HYzihong/lowcode-resume.git"
   },
-  "keywords": [],
+  "keywords": [
+    "lowcode",
+    "resume-template",
+    "resume",
+    "vue3"
+  ],
   "author": "",
   "license": "ISC",
   "bugs": {
