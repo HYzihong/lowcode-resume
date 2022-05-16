@@ -11,8 +11,9 @@
     "dev:lowcode": "pnpm -C ./apps/lowcode dev",
     "build:lowcode": "pnpm -C ./apps/lowcode build",
     "lint:lowcode": "pnpm -C ./apps/lowcode lint",
-    "test": "vitest",
-    "test:unit": "vitest"
+    "test:all": "vitest",
+    "test:unit": "vitest",
+    "coverage:all": "vitest run --coverage"
   },
   "repository": {
     "type": "git",
