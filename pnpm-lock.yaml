@@ -109,7 +109,10 @@ importers:
       vue-tsc: registry.npmmirror.com/vue-tsc/0.34.13_typescript@4.6.4
 
   packages/shared:
-    specifiers: {}
+    specifiers:
+      nanoid: ^3.3.4
+    dependencies:
+      nanoid: registry.npmmirror.com/nanoid/3.3.4
 
 packages:
 
