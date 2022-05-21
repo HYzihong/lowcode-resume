@@ -11,8 +11,9 @@
     "dev:lowcode": "pnpm -C ./apps/lowcode dev",
     "build:lowcode": "pnpm -C ./apps/lowcode build",
     "lint:lowcode": "pnpm -C ./apps/lowcode lint",
+    "test:lowcode": "pnpm -C ./apps/lowcode test",
     "test:all": "vitest",
-    "test:unit": "vitest",
+    "test:unit": "vitest -r",
     "coverage:all": "vitest run --coverage"
   },
   "repository": {
@@ -38,9 +39,7 @@
     "unbuild": "^0.7.4",
     "vitest": "^0.12.6",
     "@typescript-eslint/parser": "^5.23.0",
-    "eslint-define-config": "^1.4.0"
-  },
-  "dependencies": {
+    "eslint-define-config": "^1.4.0",
     "vue": "^3.2.33"
   }
 }
