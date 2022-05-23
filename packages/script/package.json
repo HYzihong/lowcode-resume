@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "public:all": "zx ./src/public.all.mjs"
+    "public:all": "zx ./src/public.all.mjs",
+    "gitPush:all": "zx ./src/git.push.all.mjs"
   },
   "keywords": [],
   "author": "",
