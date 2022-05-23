@@ -12,8 +12,10 @@
     "build:lowcode": "pnpm -C ./apps/lowcode build",
     "lint:lowcode": "pnpm -C ./apps/lowcode lint",
     "test:lowcode": "pnpm -C ./apps/lowcode test",
+    "build:rcimage": "pnpm -C ./packages/image build",
+    "public:all": "pnpm -C ./packages/script public:all",
     "test:all": "vitest",
-    "test:unit": "vitest -r",
+    "test:unit": "vitest",
     "coverage:all": "vitest run --coverage"
   },
   "repository": {
@@ -40,7 +42,10 @@
     "typescript": "^4.6.4",
     "unbuild": "^0.7.4",
     "vite": "^2.9.9",
-    "vitest": "^0.12.6",
+    "vitest": "^0.12.6"
+  },
+  "dependencies": {
+    "@vitejs/plugin-vue": "^2.3.3",
     "vue": "^3.2.33"
   }
 }

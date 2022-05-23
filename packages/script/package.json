@@ -1,0 +1,15 @@
+{
+  "name": "@resume-cook/script",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "public:all": "zx ./src/public.all.mjs"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "zx": "^6.1.0"
+  }
+}

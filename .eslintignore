@@ -4,3 +4,4 @@ dist
 lib
 public
 .eslintrc.js 
+packages/script
