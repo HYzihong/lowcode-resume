@@ -3,7 +3,7 @@
  * @Date: 2022-05-16 22:30:59
  * @LastEditors: hy
  * @Description: 
- * @LastEditTime: 2022-05-18 23:08:10
+ * @LastEditTime: 2022-05-24 21:09:42
  * @FilePath: /resume-cook/packages/shared/src/project/index.ts
  * Copyright 2022 hy, All Rights Reserved. 
  * 仅供学习使用~
@@ -13,7 +13,7 @@ import { uuid } from "../utils"
 // import { RElement, PageElement } from "./element"
 import { Page, RPage } from "./page"
 
-
+// const _uuid = await uuid()
 // export * from './element'
 // export * from './page'
 
