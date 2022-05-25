@@ -3,7 +3,7 @@
  * @Date: 2022-05-16 22:29:34
  * @LastEditors: hy
  * @Description: 
- * @LastEditTime: 2022-05-16 22:31:42
+ * @LastEditTime: 2022-05-24 21:09:29
  * @FilePath: /resume-cook/packages/shared/src/material/index.ts
  * Copyright 2022 hy, All Rights Reserved. 
  * 仅供学习使用~
@@ -26,12 +26,17 @@ export interface RMaterialData {
 
 // 物料
 export interface RMaterial extends RMaterialData {
+  id: string
+  name: string
+  title: string
+  // 缩略图
+  thumbnail: string
   // 类型 组件？模块？模板？
   type: string
   // 分类
   category: RCategory
   // 数据
-  date: RMaterialData[]
+  data: RMaterialData[]
   // // default版本
   // version: string
 }
