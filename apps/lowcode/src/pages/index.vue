@@ -3,8 +3,8 @@
  * @Date: 2022-05-26 23:36:48
  * @LastEditors: hy
  * @Description: 
- * @LastEditTime: 2022-05-26 23:36:50
- * @FilePath: /resume-cook/apps/lowcode/src/pages/1.vue
+ * @LastEditTime: 2022-05-26 23:45:35
+ * @FilePath: /resume-cook/apps/lowcode/src/pages/index.vue
  * Copyright 2022 hy, All Rights Reserved. 
  * 仅供学习使用~
 -->
@@ -30,11 +30,11 @@ const src = ref("../../public/pwa-192x192.png");
   <div flex items-center justify-center>
     <rc-image w-10 :src="src" />
   </div>
-  <div>
-    <!-- <div text-4xl>
+  <!-- <div>
+    <div text-4xl>
       <div i-carbon-campsite inline-block />
-    </div> -->
-    <!-- <p>
+    </div>
+    <p>
       <a
         rel="noreferrer"
         href="https://github.com/antfu/vitesse"
@@ -45,11 +45,11 @@ const src = ref("../../public/pwa-192x192.png");
     </p>
     <p>
       <em text-sm opacity-75>{{ t("intro.desc") }}</em>
-    </p> -->
+    </p>
 
-    <!-- <div py-4 /> -->
+    <div py-4 />
 
-    <!-- <input
+    <input
       id="input"
       v-model="name"
       :placeholder="t('intro.whats-your-name')"
@@ -70,8 +70,8 @@ const src = ref("../../public/pwa-192x192.png");
       <button btn m-3 text-sm :disabled="!name" @click="go">
         {{ t("button.go") }}
       </button>
-    </div> -->
-  </div>
+    </div>
+  </div> -->
 </template>
 
 <route lang="yaml">
