@@ -13,6 +13,7 @@ import Inspect from 'vite-plugin-inspect'
 import Prism from 'markdown-it-prism'
 import LinkAttributes from 'markdown-it-link-attributes'
 import Unocss from 'unocss/vite'
+import vuetify from '@vuetify/vite-plugin';
 
 const markdownWrapperClasses = 'prose prose-sm m-auto text-left'
 
@@ -63,6 +64,11 @@ export default defineConfig({
     // https://github.com/antfu/unocss
     // see unocss.config.ts for config
     Unocss(),
+
+    // https://www.npmjs.com/package/@vuetify/vite-plugin
+    vuetify({
+      autoImport: true
+    }),
 
     // https://github.com/antfu/vite-plugin-md
     // Don't need this? Try vitesse-lite: https://github.com/antfu/vitesse-lite

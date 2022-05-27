@@ -3,7 +3,7 @@
  * @Date: 2022-05-13 21:59:02
  * @LastEditors: hy
  * @Description:
- * @LastEditTime: 2022-05-25 23:19:48
+ * @LastEditTime: 2022-05-27 23:50:31
  * @FilePath: /resume-cook/apps/lowcode/src/main.ts
  * Copyright 2022 hy, All Rights Reserved.
  * 仅供学习使用~
@@ -19,6 +19,12 @@ import generatedRoutes from '~pages'
 import '@unocss/reset/tailwind.css'
 import './styles/main.css'
 import 'uno.css'
+
+import 'vuetify/styles';
+
+import { createVuetify } from 'vuetify';
+// import Vuetify from 'vuetify'
+import 'vuetify/dist/vuetify.min.css'
 
 const materialList: RMaterial[] = [
   {
@@ -59,6 +65,7 @@ export const createApp = ViteSSG(
   App,
   { routes, base: import.meta.env.BASE_URL },
   (ctx) => {
+    ctx.app.use(createVuetify({}))
     // install all modules under `modules/`
     // console.log('ctx ==>', ctx);
     // ctx.app.component('rc-image', (window as any).RCImage.render)
