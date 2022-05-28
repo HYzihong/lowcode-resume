@@ -3,11 +3,17 @@
  * @Date: 2022-05-16 22:29:34
  * @LastEditors: hy
  * @Description: 
- * @LastEditTime: 2022-05-24 21:09:29
+ * @LastEditTime: 2022-05-28 21:17:43
  * @FilePath: /resume-cook/packages/shared/src/material/index.ts
  * Copyright 2022 hy, All Rights Reserved. 
  * 仅供学习使用~
  */
+
+export interface RTag {
+  id: string;
+  content: string;
+  description: string
+}
 
 // 物料分类
 export interface RCategory {
@@ -15,6 +21,8 @@ export interface RCategory {
   // 基础模板 高级模板
   // 数据模块
   name: string
+  // 列数
+  cols: 1 | 2 | 3 | 4 | 6 | 7 | 8 | 9 | 10 | 11 | 12
 }
 
 export interface RMaterialData {
@@ -29,6 +37,8 @@ export interface RMaterial extends RMaterialData {
   id: string
   name: string
   title: string
+  description: string
+  tags: RTag[]
   // 缩略图
   thumbnail: string
   // 类型 组件？模块？模板？

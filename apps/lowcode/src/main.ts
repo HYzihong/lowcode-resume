@@ -3,7 +3,7 @@
  * @Date: 2022-05-13 21:59:02
  * @LastEditors: hy
  * @Description:
- * @LastEditTime: 2022-05-27 23:50:31
+ * @LastEditTime: 2022-05-28 21:14:59
  * @FilePath: /resume-cook/apps/lowcode/src/main.ts
  * Copyright 2022 hy, All Rights Reserved.
  * 仅供学习使用~
@@ -32,12 +32,15 @@ const materialList: RMaterial[] = [
     type: 'component',
     category: {
       name: '基础组件',
+      cols: 6
     },
     // 当前默认版本
     version: '0.0.1',
     source: 'rc-image.0.0.1.umd.js',
     name: 'LcImage',
     title: '图片',
+    description: '',
+    tags: [],
     // 预览图
     thumbnail: '',
     //
