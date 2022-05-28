@@ -3,7 +3,7 @@
  * @Date: 2022-05-26 23:36:48
  * @LastEditors: hy
  * @Description: 
- * @LastEditTime: 2022-05-26 23:45:35
+ * @LastEditTime: 2022-05-28 20:12:03
  * @FilePath: /resume-cook/apps/lowcode/src/pages/index.vue
  * Copyright 2022 hy, All Rights Reserved. 
  * 仅供学习使用~
@@ -23,7 +23,7 @@
 // const { t } = useI18n();
 
 //
-const src = ref("../../public/pwa-192x192.png");
+const src = ref("https://cdn.vuetifyjs.com/images/cards/house.jpg");
 </script>
 
 <template>
