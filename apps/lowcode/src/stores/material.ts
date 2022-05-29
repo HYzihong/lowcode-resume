@@ -3,7 +3,7 @@
  * @Date: 2022-05-28 12:44:23
  * @LastEditors: hy
  * @Description: 
- * @LastEditTime: 2022-05-28 22:59:20
+ * @LastEditTime: 2022-05-29 23:03:27
  * @FilePath: /resume-cook/apps/lowcode/src/stores/material.ts
  * Copyright 2022 hy, All Rights Reserved. 
  * 仅供学习使用~
@@ -23,14 +23,14 @@ export const useMaterialStore = defineStore('material', () => {
       type: 'component',
       category: {
         name: '基础组件',
-        cols: 6
+        cols: 12
       },
       // 当前默认版本
       version: '0.0.1',
       source: 'rc-image.0.0.1.umd.js',
       name: 'LcImage',
-      title: '图片',
-      description: "",
+      title: '基本信息',
+      description: "图片图片图片图片图片1",
       tags: [],
       // 预览图
       thumbnail: 'https://cdn.vuetifyjs.com/images/cards/house.jpg',
@@ -47,14 +47,14 @@ export const useMaterialStore = defineStore('material', () => {
       type: 'component',
       category: {
         name: "基础组件",
-        cols: 6
+        cols: 12
       },
       // 当前默认版本
       version: '0.0.1',
       source: 'rc-image.0.0.1.umd.js',
       name: 'LcImage',
-      title: '图片',
-      description: "",
+      title: '教育信息',
+      description: "图片图片图片图片2",
 
       tags: [],
 
@@ -118,12 +118,13 @@ export const useMaterialStore = defineStore('material', () => {
     //       item.isShow = !item.isShow
     //     }
     //   });
-    if (showList.value)
-      showList.value.forEach(item => {
-        if (item.id === id) {
-          item.isShow = !item.isShow
-        }
-      });
+    // if (showList.value)
+    // showList.value.forEach(item => {
+    materials.value.forEach(item => {
+      if (item.id === id) {
+        item.isShow = !item.isShow
+      }
+    });
 
 
   }
