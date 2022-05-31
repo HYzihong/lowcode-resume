@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "resume by lowcode cooking",
   "main": "index.js",
+  "packageManager": "pnpm@7.0.0",
   "scripts": {
     "build:shared": "pnpm -C ./packages/shared build",
     "dev:shared": "pnpm -C ./packages/shared stub",
@@ -12,6 +13,7 @@
     "build:lowcode": "pnpm -C ./apps/lowcode build",
     "lint:lowcode": "pnpm -C ./apps/lowcode lint",
     "test:lowcode": "pnpm -C ./apps/lowcode test",
+    "typecheck:lowcode": "pnpm -C ./apps/lowcode typecheck",
     "build:rcimage": "pnpm -C ./packages/image build",
     "public:all": "pnpm -C ./packages/script public:all",
     "test:all": "vitest",

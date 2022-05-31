@@ -13,11 +13,15 @@ jobs:
   lint:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - name: Checkout
+        uses: actions/checkout@v3
+
       - name: Install pnpm
         uses: pnpm/action-setup@v2
-      - name: Set node version to 16
+
+      - name: Set node version to 16.x
         uses: actions/setup-node@v3
+
         with:
           node-version: 16.x
           cache: pnpm
@@ -29,24 +33,55 @@ jobs:
       - name: Lint
         run: pnpm run lint:lowcode
 
-  # typecheck:
+  typecheck:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@v2
+
+      - name: Set node version to 16.x
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16.x
+          cache: pnpm
+
+      - name: Install
+        run: pnpm install
+
+      - name: Typecheck
+        run: pnpm run typecheck:lowcode
+
+  test:
+    runs-on: ${{ matrix.os }}
+
+    strategy:
+      matrix:
+        node-version: [14.x, 16.x]
+        os: [ubuntu-latest]
+      fail-fast: false
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@v2
+
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+          registry-url: https://registry.npmjs.org/
+          cache: pnpm
+
+      - run: pnpm install
+      - run: pnpm run test:lowcode
+
+  # test-e2e:
   #   runs-on: ubuntu-latest
-  #   steps:
-  #     - uses: actions/checkout@v3
-  #     - uses: pnpm/action-setup@v2
-  #     - uses: actions/setup-node@v3
-  #       with:
-  #         node-version: 16.x
-  #         cache: pnpm
-  #     - name: Install
-  #       run: pnpm install
-
-  #     - name: Typecheck
-  #       run: pnpm run typecheck
-
-  # test:
-  #   runs-on: ${{ matrix.os }}
-
   #   strategy:
   #     matrix:
   #       node-version: [14.x, 16.x]
@@ -54,29 +89,17 @@ jobs:
   #     fail-fast: false
 
   #   steps:
-  #     - uses: actions/checkout@v3
-  #     - uses: pnpm/action-setup@v2
-  #     - name: Use Node.js ${{ matrix.node-version }}
-  #       uses: actions/setup-node@v3
-  #       with:
-  #         node-version: ${{ matrix.node-version }}
-  #         registry-url: https://registry.npmjs.org/
-  #         cache: pnpm
+  #     - name: Checkout
+  #       uses: actions/checkout@v3
 
-  #     - run: pnpm install
-  #     - run: pnpm run test:unit
-
-  # test-e2e:
-  #   runs-on: ubuntu-latest
-  #   steps:
-  #     - uses: actions/checkout@v3
   #     - uses: actions/cache@v3
   #       with:
   #         path: |
   #           ~/.cache
   #         key: cypress-cache-${{ runner.os }}-${{ hashFiles('pnpm-lock.yaml') }}
 
-  #     - uses: pnpm/action-setup@v2
+  #     - name: Install pnpm
+  #       uses: pnpm/action-setup@v2
 
   #     - name: Use Node.js ${{ matrix.node-version }}
   #       uses: actions/setup-node@v3
@@ -84,7 +107,6 @@ jobs:
   #         node-version: ${{ matrix.node-version }}
   #         registry-url: https://registry.npmjs.org/
   #         cache: pnpm
-
   #     - run: pnpm install
 
   #     - name: Cypress PNPM Patch
