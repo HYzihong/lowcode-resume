@@ -3,7 +3,7 @@ import { useMaterialStore } from "~/stores/material";
 const useMaterial = useMaterialStore();
 const materialList = useMaterial.materials;
 const loading = ref(false);
-
+// import type { TempMaterial } from "~/types/material";
 // 列的默认占位 最大12
 // const cols = ref(6);
 // const cards = ref([

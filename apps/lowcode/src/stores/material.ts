@@ -3,18 +3,15 @@
  * @Date: 2022-05-28 12:44:23
  * @LastEditors: hy
  * @Description:
- * @LastEditTime: 2022-06-01 01:10:58
+ * @LastEditTime: 2022-06-01 01:59:04
  * @FilePath: /resume-cook/apps/lowcode/src/stores/material.ts
  * Copyright 2022 hy, All Rights Reserved.
  * 仅供学习使用~
  */
 
-import type { RMaterial } from '@resume-cooking/shared'
 import { acceptHMRUpdate, defineStore } from 'pinia'
+import { TempMaterial } from 'types/material'
 
-interface TempMaterial extends RMaterial {
-  isShow?: boolean
-}
 
 export const useMaterialStore = defineStore('material', () => {
   const materials = ref<TempMaterial[]>([
