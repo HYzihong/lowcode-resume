@@ -3,15 +3,15 @@
  * @Date: 2022-05-13 21:59:02
  * @LastEditors: hy
  * @Description:
- * @LastEditTime: 2022-05-29 23:07:26
+ * @LastEditTime: 2022-06-01 01:02:13
  * @FilePath: /resume-cook/apps/lowcode/src/main.ts
  * Copyright 2022 hy, All Rights Reserved.
  * 仅供学习使用~
  */
 import { ViteSSG } from 'vite-ssg'
 import { setupLayouts } from 'virtual:generated-layouts'
-import type { RMaterial } from '@resume-cook/shared'
-import { Project } from '@resume-cook/shared'
+import type { RMaterial } from '@resume-cooking/shared'
+import { Project } from '@resume-cooking/shared'
 import App from './App.vue'
 import { loadCompScript } from './utlis'
 import generatedRoutes from '~pages'
