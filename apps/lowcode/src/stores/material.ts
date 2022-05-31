@@ -2,14 +2,14 @@
  * @Author: hy
  * @Date: 2022-05-28 12:44:23
  * @LastEditors: hy
- * @Description: 
- * @LastEditTime: 2022-06-01 01:01:40
+ * @Description:
+ * @LastEditTime: 2022-06-01 01:10:58
  * @FilePath: /resume-cook/apps/lowcode/src/stores/material.ts
- * Copyright 2022 hy, All Rights Reserved. 
+ * Copyright 2022 hy, All Rights Reserved.
  * 仅供学习使用~
  */
 
-import { RMaterial } from '@resume-cooking/shared'
+import type { RMaterial } from '@resume-cooking/shared'
 import { acceptHMRUpdate, defineStore } from 'pinia'
 
 interface TempMaterial extends RMaterial {
@@ -23,7 +23,7 @@ export const useMaterialStore = defineStore('material', () => {
       type: 'component',
       category: {
         name: '基础组件',
-        cols: 12
+        cols: 12,
       },
       // 当前默认版本
       version: '0.0.1',
@@ -47,7 +47,7 @@ export const useMaterialStore = defineStore('material', () => {
       type: 'component',
       category: {
         name: "基础组件",
-        cols: 12
+        cols: 12,
       },
       // 当前默认版本
       version: '0.0.1',
@@ -75,7 +75,7 @@ export const useMaterialStore = defineStore('material', () => {
    * @param list - new material to set
    */
   function setMaterialList(list: TempMaterial[]): void {
-    list.forEach(item => {
+    list.forEach((item) => {
       item.isShow = false
       materials.value?.push(item)
     })
@@ -87,19 +87,18 @@ export const useMaterialStore = defineStore('material', () => {
    * @return {*}
    */
   function setShowAction(id: string): void {
-    if (materials.value)
-      materials.value.forEach(item => {
-        if (item.id === id) {
+    if (materials.value) {
+      materials.value.forEach((item) => {
+        if (item.id === id)
           item.isShow = !item.isShow
-        }
-      });
-
+      })
+    }
   }
 
   return {
     materials,
     setMaterialList,
-    setShowAction
+    setShowAction,
   }
 })
 
