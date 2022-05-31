@@ -3,20 +3,19 @@
  * @Date: 2022-05-28 12:44:23
  * @LastEditors: hy
  * @Description:
- * @LastEditTime: 2022-06-01 01:59:04
+ * @LastEditTime: 2022-06-01 02:03:41
  * @FilePath: /resume-cook/apps/lowcode/src/stores/material.ts
  * Copyright 2022 hy, All Rights Reserved.
  * 仅供学习使用~
  */
 
 import { acceptHMRUpdate, defineStore } from 'pinia'
-import { TempMaterial } from 'types/material'
-
+import type { TempMaterial } from 'types/material'
 
 export const useMaterialStore = defineStore('material', () => {
   const materials = ref<TempMaterial[]>([
     {
-      id: "&8m5*m2jv**_93xpnagpn&vzux*k6&unijv9",
+      id: '&8m5*m2jv**_93xpnagpn&vzux*k6&unijv9',
       type: 'component',
       category: {
         name: '基础组件',
@@ -27,7 +26,7 @@ export const useMaterialStore = defineStore('material', () => {
       source: 'rc-image.0.0.1.umd.js',
       name: 'LcImage',
       title: '基本信息',
-      description: "图片图片图片图片图片1",
+      description: '图片图片图片图片图片1',
       tags: [],
       // 预览图
       thumbnail: 'https://cdn.vuetifyjs.com/images/cards/house.jpg',
@@ -40,10 +39,10 @@ export const useMaterialStore = defineStore('material', () => {
       ],
     },
     {
-      id: "@13qzck26t8p8mb=b2yubfs5xuk2r1q0reuc",
+      id: '@13qzck26t8p8mb=b2yubfs5xuk2r1q0reuc',
       type: 'component',
       category: {
-        name: "基础组件",
+        name: '基础组件',
         cols: 12,
       },
       // 当前默认版本
@@ -51,7 +50,7 @@ export const useMaterialStore = defineStore('material', () => {
       source: 'rc-image.0.0.1.umd.js',
       name: 'LcImage',
       title: '教育信息',
-      description: "图片图片图片图片2",
+      description: '图片图片图片图片2',
 
       tags: [],
 
